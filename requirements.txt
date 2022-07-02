@@ -9,3 +9,4 @@ python-pptx
 pywin32
 python-docx
 selenium
+docx2pdf
