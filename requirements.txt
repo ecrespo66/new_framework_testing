@@ -11,3 +11,4 @@ python-docx
 selenium
 docx2pdf
 fitz
+PyMuPDF
