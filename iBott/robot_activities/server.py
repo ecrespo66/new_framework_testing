@@ -31,7 +31,7 @@ class OrchestratorAPI:
         Returns:
              True if the connection is working, False otherwise.
         """
-        if self.username is None:
+        if self.token is None:
             self.debug = True
             folder = Path(os.path.dirname(os.path.realpath(__file__))).parent.parent
             debug_file = os.path.join(folder, 'debug.json')
