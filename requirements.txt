@@ -12,3 +12,4 @@ selenium
 docx2pdf
 fitz
 PyMuPDF
+opencv-python
