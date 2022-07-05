@@ -4,7 +4,7 @@ import os
 import string
 import warnings
 from pathlib import Path
-from random import random
+import random
 import requests
 
 
@@ -16,6 +16,7 @@ class OrchestratorAPI:
 
     def __init__(self, **kwargs):
         self.url = kwargs.get('url', None)
+
         self.token = kwargs.get('token', None)
         self.parameters = kwargs.get('params', None)
         self.execution_id = kwargs.get("ExecutionId", None)
@@ -33,7 +34,7 @@ class OrchestratorAPI:
              True if the connection is working, False otherwise.
         """
         if self.token is None:
-            self.debug = True
+            #self.debug = True
             folder = Path(os.path.dirname(os.path.realpath(__file__))).parent.parent
             debug_file = os.path.join(folder, 'debug.json')
             try:
@@ -67,11 +68,12 @@ class OrchestratorAPI:
         """
         if "https://" in self.url:
             return self.url.replace("https://", "")
-        return self.url.replace("http://", "")
+        else:
+            return self.url.replace("http://", "")
 
     def send_message(self, message, log_type='log'):
         """
-        Async method used to send a message to the orchestrator.
+        method used to send a message to the orchestrator.
         Arguments:
             message: str
             log_type: str
