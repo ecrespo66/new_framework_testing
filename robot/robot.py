@@ -1,5 +1,5 @@
+import time
 from iBott import RobotFlow, ChromeBrowser
-from iBott.browser_activities.firefox import FirefoxBrowser
 from iBott.robot_activities.base import Bot
 from robot.flow import Nodes
 
@@ -37,6 +37,7 @@ class Robot(Bot):
         self.browser.open()
         self.browser.get("https://google.com/")
         self.browser.save_cookies()
+        time.sleep(10)
 
     @RobotFlow(Nodes.ConditionNode, parents=["process_data"], condition=lambda x: True if x else False)
     def get_transaction_data(self, *args):
