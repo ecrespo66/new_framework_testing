@@ -68,7 +68,7 @@ class OrchestratorAPI:
             return self.url.replace("https://", "")
         return self.url.replace("http://", "")
 
-    async def send_message(self, message, log_type='log'):
+    def send_message(self, message, log_type='log'):
         """
         Async method used to send a message to the orchestrator.
         Arguments:
