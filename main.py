@@ -10,8 +10,8 @@ if __name__ == "__main__":
         kwargs = OrchestratorAPI.get_args(sys.argv)
         robot = Robot(**kwargs)
         RobotFlow.run_robot(robot)
-    except:
-        raise RobotBaseException(robot)
+    except Exception as e:
+        raise BaseException(e)
 
 
 

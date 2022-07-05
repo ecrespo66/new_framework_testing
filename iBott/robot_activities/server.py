@@ -115,8 +115,7 @@ class OrchestratorAPI:
                 'RobotId': None,
                 'ExecutionId': None,
                 'url': None,
-                'username': None,
-                'password': None,
+                'token': None,
                 'params': None
             }
         return args
