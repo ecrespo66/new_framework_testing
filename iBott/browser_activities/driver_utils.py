@@ -460,7 +460,7 @@ def get_geckodriver_url(version):
     """
     platform, architecture = get_platform_architecture_firefox()
     return f'https://github.com/mozilla/geckodriver/releases/download/{version}' \
-           f'/geckodriver-{version}-{platform}{architecture}.tar.gz'
+           f'/geckodriver-{version}-{platform}{architecture}.zip'
 
 
 def download_geckodriver(cwd=False):

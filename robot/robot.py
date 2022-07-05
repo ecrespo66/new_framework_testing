@@ -1,4 +1,4 @@
-from iBott import RobotFlow
+from iBott import RobotFlow, ChromeBrowser
 from iBott.browser_activities.firefox import FirefoxBrowser
 from iBott.robot_activities.base import Bot
 from robot.flow import Nodes
@@ -32,7 +32,7 @@ class Robot(Bot):
         """
         self.log.trace("start Method")
         self.element_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        self.browser = FirefoxBrowser(undetectable=True)
+        self.browser = ChromeBrowser(undetectable=True)
         self.browser.ignore_popups()
         self.browser.open()
         self.browser.get("https://google.com/")
